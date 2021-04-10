@@ -1,0 +1,68 @@
+.header {
+	nav {
+		padding: 1rem;
+
+		@include breakpoint-up(large) {
+			padding: 1rem 10.3125rem;
+		}
+	}
+
+	&__menu {
+		// mobile menu
+
+		> span {
+			display: block;
+			width: 25px;
+			height: 2px;
+			background-color: $grayishBlue;
+
+			&:not(:last-child) {
+				margin-bottom: 3px;
+			}
+		}
+	}
+
+	&__logo {
+		img {
+			width: 8.8125rem;
+		}
+	}
+
+	&__links {
+		align-items: center;
+		a {
+			font-size: 0.8753em;
+			color: $grayishBlue;
+			transition: 300ms ease-in-out;
+			font-weight: 400;
+			position: relative;
+
+			&:not(:last-child) {
+				margin-right: 2rem;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 0;
+				left: 0;
+				right: 0;
+				bottom: -34px;
+				height: 4px;
+				background-image: linear-gradient(to right, $limeGreen, $brightCyan);
+				opacity: 1;
+				transition: 300ms ease-in-out;
+			}
+
+			&:hover {
+				color: $darkBlue;
+
+				&::before {
+					opacity: 1;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
