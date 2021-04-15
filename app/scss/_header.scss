@@ -1,4 +1,74 @@
 .header {
+	&.open {
+		.overlay {
+			display: block;
+			visibility: visible;
+			animation: fade-in 300ms ease-in-out forwards;
+		}
+		.header__menu {
+			> span {
+				background: $darkBlue;
+				&:nth-child(1) {
+					transform: rotate(45deg);
+				}
+
+				&:nth-child(3) {
+					transform: rotate(-45deg);
+				}
+
+				&:nth-child(2) {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	//OVERLAY MENU LIST FOR MOBILE
+
+	.overlay {
+		visibility: hidden;
+		position: fixed;
+		top: 56px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient($darkBlue, transparent);
+		transition: all 300ms ease-in-out;
+		animation: fade-out 300ms ease-in-out forwards;
+
+		&__container {
+			padding: 0;
+			background: $veryLightGray;
+			width: 87.4vw;
+			height: 265px;
+			margin: 25px auto 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border-radius: 4px;
+
+			> li {
+				font-size: $fs-normal;
+
+				&:not(:last-child) {
+					margin-bottom: 1.6rem;
+				}
+
+				> a {
+					color: $grayishBlue;
+
+					&:hover {
+						color: $darkBlue;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+
+	// MAIN NAVIGATIONS
+
 	nav {
 		padding: 1rem;
 
@@ -11,13 +81,16 @@
 		// mobile menu
 
 		> span {
+			border-radius: 1rem;
 			display: block;
 			width: 25px;
-			height: 2px;
+			height: 3px;
 			background-color: $grayishBlue;
+			transition: all 300ms ease-in-out;
+			transform-origin: 0px 1.2px;
 
 			&:not(:last-child) {
-				margin-bottom: 3px;
+				margin-bottom: 6px;
 			}
 		}
 	}
