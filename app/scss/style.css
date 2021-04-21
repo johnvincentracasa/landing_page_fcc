@@ -372,13 +372,18 @@ button:hover,
 }
 
 .hero__image {
+  position: relative;
   min-height: 16.25rem;
   width: 100%;
+  height: 100%;
+  background-image: url(/images/bg-intro-mobile.svg);
+  background-size: 99%;
+  background-position: center -5.5625rem;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 64em) {
   .hero__image {
-    position: relative;
     -webkit-box-flex: 3;
         -ms-flex: 3;
             flex: 3;
@@ -386,16 +391,11 @@ button:hover,
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-  }
-  .hero__image::after {
-    height: 100%;
-    width: 100%;
-    background-image: url(/images/image-mockups.png);
-    background-size: 90%;
-    background-position: center -8.5625rem;
-    background-repeat: no-repeat;
+    background-image: none;
   }
   .hero__image::before {
+    content: '';
+    position: absolute;
     height: 100%;
     width: 100%;
     background-image: url(/images/bg-intro-desktop.svg);
@@ -411,19 +411,8 @@ button:hover,
   height: 100%;
   width: 100%;
   background-image: url(/images/image-mockups.png);
-  background-size: 90%;
-  background-position: center -8.5625rem;
-  background-repeat: no-repeat;
-}
-
-.hero__image::before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: url(/images/bg-intro-mobile.svg);
-  background-size: cover;
-  background-position: center center;
+  background-position: center -6rem;
+  background-size: 80%;
   background-repeat: no-repeat;
 }
 
