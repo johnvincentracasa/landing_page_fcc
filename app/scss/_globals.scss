@@ -11,6 +11,8 @@ html {
 }
 
 body {
+	max-width: 100vw;
+	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
 	line-height: 1.3;
@@ -40,6 +42,7 @@ li {
 }
 
 //container
+
 .container {
 	max-width: 69.69rem;
 	margin: 0 auto;
@@ -123,6 +126,7 @@ button,
 	}
 }
 .desktop_view {
+	
 	// hide for desktop
 
 	@include breakpoint-up(large) {

@@ -1,0 +1,23 @@
+.about {
+	background: $lightGrayishBlue;
+	&__heading {
+		height: 9rem;
+		padding-bottom: 3.5rem;
+		h2 {
+			margin-top: 0;
+			margin-bottom: 1.25rem;
+			font-size: $fs-lg;
+			font-weight: 300;
+			line-height: 1.15;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+		h2,
+		p {
+			text-align: center;
+			display: block;
+		}
+	}
+}

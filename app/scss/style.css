@@ -80,6 +80,8 @@ html {
 }
 
 body {
+  max-width: 100vw;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   line-height: 1.3;
@@ -93,7 +95,7 @@ body {
     font-size: 3.2rem;
   }
   p {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -360,6 +362,7 @@ button:hover,
 .hero {
   background-color: #fafafa;
   position: relative;
+  max-width: 100vw;
 }
 
 @media (min-width: 64em) {
@@ -437,15 +440,14 @@ button:hover,
     width: 120%;
     height: 122%;
     background-size: 94%;
-    background-position: center 127%;
-    left: 54%;
+    background-position: center 120%;
+    left: 20%;
   }
 }
 
 .hero__text {
   height: 22.5rem;
   text-align: center;
-  padding-right: 0;
   margin-right: auto;
 }
 
@@ -487,6 +489,7 @@ button:hover,
     height: 100%;
     padding-top: 11rem;
     padding-bottom: 11rem;
+    padding-right: 0;
   }
   .hero__text h1,
   .hero__text p,
@@ -495,5 +498,32 @@ button:hover,
     margin-right: auto;
     text-align: left;
   }
+}
+
+.about {
+  background: #f3f4f6;
+}
+
+.about__heading {
+  height: 9rem;
+  padding-bottom: 3.5rem;
+}
+
+.about__heading h2 {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+.about__heading p {
+  margin-bottom: 0;
+}
+
+.about__heading h2,
+.about__heading p {
+  text-align: center;
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
