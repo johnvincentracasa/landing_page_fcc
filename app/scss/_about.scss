@@ -1,68 +1,101 @@
 .about {
-	background: $lightGrayishBlue;
-	padding-top: 4rem;
-	padding-bottom: 4rem;
+  background: $lightGrayishBlue;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
-	@include breakpoint-up(large) {
-		max-width: 100vw;
-		padding-top: 7rem;
-		padding-bottom: 7rem;
-	}
-	&__heading {
-		padding-bottom: 3.5rem;
-		h2 {
-			margin-top: 0;
-			margin-bottom: 1.25rem;
-			font-size: $fs-lg;
-			font-weight: 300;
-			line-height: 1.15;
-		}
+  // MAIN ABOUT STYLE
 
-		p {
-			margin-bottom: 0;
-		}
-		h2,
-		p {
-			text-align: center;
-			display: block;
-		}
+  p {
+    color: $grayishBlue;
+  }
 
-		@include breakpoint-up(larege) {
-		}
-	}
-	&__features {
-		.about__feature {
-			width: 100%;
-			&:not(:last-child) {
-				padding-bottom: 3.5rem;
-			}
-			img {
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
-				padding-bottom: 1.75rem;
-			}
-			h3 {
-				margin-top: 0;
-				margin-bottom: 1.25rem;
-				font-size: $fs-lg;
-				font-weight: 300;
-				line-height: 1.15;
-			}
+  @include breakpoint-up(large) {
+    max-width: 100vw;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
 
-			p {
-				margin-bottom: 0;
-			}
+  // ABOUT HEADING
 
-			h3,
-			p {
-				text-align: center;
-				display: block;
-			}
-		}
+  &__heading {
+    padding-bottom: 3.5rem;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1.25rem;
+      font-size: $fs-lg;
+      font-weight: 300;
+      line-height: 1.15;
+    }
 
-		@include breakpoint-up(large) {
-			display: flex;
-		}
-	}
+    p {
+      margin-bottom: 0;
+    }
+    h2,
+    p {
+      text-align: center;
+      display: block;
+    }
+
+    @include breakpoint-up(large) {
+      h2 {
+        font-size: $fs-lgr;
+      }
+      h2,
+      p {
+        text-align: left;
+        max-width: 38.5rem;
+      }
+    }
+  }
+
+  // ABOUT FEATURES
+
+  &__features {
+    .about__feature {
+      width: 100%;
+      &:not(:last-child) {
+        padding-bottom: 3.5rem;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 1.75rem;
+      }
+      h3 {
+        margin-top: 0;
+        margin-bottom: 1.25rem;
+        font-size: $fs-lg;
+        font-weight: 300;
+        line-height: 1.15;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      h3,
+      p {
+        text-align: center;
+        display: block;
+      }
+    }
+
+    @include breakpoint-up(large) {
+      display: flex;
+      .about__feature {
+        &:not(:last-child) {
+          padding-right: 1.75rem;
+          padding-bottom: 0;
+        }
+        img {
+          margin-left: 0;
+        }
+        h3,
+        p {
+          text-align: left;
+        }
+      }
+    }
+  }
 }
