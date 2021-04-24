@@ -83,14 +83,17 @@
 
     @include breakpoint-up(large) {
       display: flex;
+
       .about__feature {
+        padding-right: 1.4rem;
+
         &:not(:last-child) {
-          padding-right: 1.75rem;
           padding-bottom: 0;
         }
         img {
           margin-left: 0;
         }
+
         h3,
         p {
           text-align: left;
