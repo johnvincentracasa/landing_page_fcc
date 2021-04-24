@@ -27,7 +27,7 @@ body {
 	}
 
 	p {
-		font-size: $fs-lg;
+		font-size: $fs-md;
 	}
 }
 
@@ -126,7 +126,6 @@ button,
 	}
 }
 .desktop_view {
-	
 	// hide for desktop
 
 	@include breakpoint-up(large) {
