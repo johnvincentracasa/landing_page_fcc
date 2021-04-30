@@ -57,7 +57,7 @@
 		@include breakpoint-up(medium) {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-between;
+			justify-content: space-evenly;
 			padding-left: 0;
 			padding-right: 0;
 			.article {
@@ -72,6 +72,10 @@
 					padding-right: 1.5rem;
 				}
 			}
+		}
+
+		@include breakpoint-up(large) {
+			justify-content: space-between;
 		}
 	}
 }

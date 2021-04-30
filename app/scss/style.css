@@ -695,9 +695,9 @@ button:hover,
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     padding-left: 0;
     padding-right: 0;
   }
@@ -710,6 +710,14 @@ button:hover,
   .blog__articles .article .article__desc {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .blog__articles {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -726,6 +734,13 @@ button:hover,
   max-width: 69.69rem;
   margin: 0 auto;
   width: 100%;
+}
+
+@media (min-width: 64em) {
+  .footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 .footer__icons {
@@ -749,20 +764,13 @@ button:hover,
   padding-right: 0.9rem;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 64em) {
   .footer__icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    padding-bottom: 0;
+    display: -ms-grid;
+    display: grid;
     -ms-flex-line-pack: justify;
         align-content: space-between;
-    height: 95px;
-    padding-right: 135px;
-    padding-bottom: 0;
   }
 }
 
@@ -772,7 +780,7 @@ button:hover,
 }
 
 .footer .footer__links1 a, .footer__links2 a {
-  color: #9698a6;
+  color: white;
   margin: 0 auto;
 }
 
@@ -781,7 +789,7 @@ button:hover,
 }
 
 .footer .footer__links1 a:hover, .footer__links2 a:hover {
-  color: limeGreen;
+  color: #75e875;
   font-weight: 400;
 }
 
@@ -789,8 +797,20 @@ button:hover,
   padding-bottom: 1.375rem;
 }
 
+@media (min-width: 64em) {
+  .footer__links1 {
+    padding-bottom: 0;
+  }
+}
+
 .footer__links2 {
-  padding-bottom: 2.1875rem;
+  padding-bottom: 2.187rem;
+}
+
+@media (min-width: 64em) {
+  .footer__links2 {
+    padding-bottom: 0;
+  }
 }
 
 .footer__btn {
@@ -801,14 +821,17 @@ button:hover,
   color: #9698a6;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 64em) {
   .footer {
-    max-height: 190px;
+    height: 100%;
   }
   .footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=style.css.map */

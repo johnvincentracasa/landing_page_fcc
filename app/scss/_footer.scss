@@ -12,6 +12,11 @@
 		width: 100%;
 	}
 
+	@include breakpoint-up(large) {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+
 	&__icons {
 		padding-bottom: 2.25rem;
 
@@ -31,13 +36,10 @@
 			}
 		}
 
-		@include breakpoint-up(medium) {
-			display: flex;
-			flex-direction: column;
-			align-content: space-between;
-			height: 95px;
-			padding-right: 135px;
+		@include breakpoint-up(large) {
 			padding-bottom: 0;
+			display: grid;
+			align-content: space-between;
 		}
 	}
 
@@ -45,7 +47,7 @@
 	&__links2 {
 		display: grid;
 		a {
-			color: $grayishBlue;
+			color: $White;
 			margin: 0 auto;
 
 			&:not(:last-child) {
@@ -53,7 +55,7 @@
 			}
 
 			&:hover {
-				color: limeGreen;
+				color: rgb(117, 232, 117);
 				font-weight: 400;
 			}
 		}
@@ -61,10 +63,18 @@
 
 	&__links1 {
 		padding-bottom: 1.375rem;
+
+		@include breakpoint-up(large) {
+			padding-bottom: 0;
+		}
 	}
 
 	&__links2 {
-		padding-bottom: 2.1875rem;
+		padding-bottom: 2.187rem;
+
+		@include breakpoint-up(large) {
+			padding-bottom: 0;
+		}
 	}
 
 	&__btn {
@@ -75,10 +85,11 @@
 		color: $grayishBlue;
 	}
 
-	@include breakpoint-up(medium) {
-		max-height: 190px;
+	@include breakpoint-up(large) {
+		height: 100%;
 		&__container {
 			display: flex;
+			justify-content: space-between;
 		}
 	}
 }
